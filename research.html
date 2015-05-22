@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="Favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="Favicon.ico" mce_href="Favicon.ico" type="image/x-icon">
+<!-- main style sheet -->
+<link rel="stylesheet" href="style/style_4.css">
+<!-- scroller style sheet -->
+<link rel="stylesheet" href="style/nanoscroller.css">
+<!-- latest jQuery direct from google's and Microsoft's CDN -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- scroller script -->
+<script type="text/javascript" src="script/jquery.nanoscroller.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+         $(".nano").nanoScroller(); 
+    
+		$("#nano_wrapper").on("update",function(event,values){
+			if (values.position>100) {
+				$(".to_top").fadeIn();
+			} else {
+				$(".to_top").fadeOut();
+			}
+		});
+		
+		//Click event to scroll to top
+		$(".to_top").click(function(){
+			$(".nano").nanoScroller({scroll: "top"});
+			return false;
+		});
+	});
+</script>
+
+<title>乐疗小站</title>
+</head>
+
+<body>
+	<div id="guide_wrapper">
+    	<!-- navigation bar -->
+        <div id="guide_nav_bar">
+        	<div id="nav_content">
+            	<ul>
+                	<li id="logo"><a href="#" target="_self"  title="乐疗小站"></a></li>
+                	<li><a href="index.html" target="_self">乐疗小站</a></li>
+                    <li><a href="team.html" target="_self">专业团队</a></li>
+                    <li><a href="research.html" target="_self">研究成果</a></li>
+                    <li><a href="http://www.comp.polyu.edu.hk/~csyuzhao" target="new">认知计算实验室</a></li>
+                    <li><a href="http://www.polyu.edu.hk/uhs/hk/" target="new">医疗保健处</a></li>
+                    <li><a href="http://musicrazy.com/phpbb" target="new">讨论区</a></li>
+                    <li id="nav_play"><a href="music.html" target="_self"  title="播放"></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- body content area -->
+        <div id="nano_wrapper" class="nano">
+        	<div class="nano-content">
+        		<div class="body_wrapper">
+                    <div id="guide_body_area">
+                        <div id="guide_body_shadow1">
+                            <div id="guide_body_shadow2">
+                                
+                                <div id="guide_content">
+                                    <div id="header">
+                                        <h2>研究成果</h2>
+                                        <div class="seg_line"></div>            
+                                    </div>
+                                    <div></div>
+            
+                                    <div class="footer">
+                                        <div class="footer_seg_line"></div>
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr><td align="center"><div class="footer_info"> Copyright ©2015 <a href="http://www.comp.polyu.edu.hk/~csyuzhao" target="_self">香港理工大学电子计算学系认知科学实验室</a> & <a href="http://www.polyu.edu.hk/uhs/hk/"> 香港理工大学医疗保健处</a>. All Rights Reserved.</div></td></tr>
+                                                <tr><td align="center">
+                                                <div class="footer_info">This website is best viewed with Microsoft Internet Explorer 7.0, Firefox 3.0, Chrome 10.0 or above.</div>
+                                                </td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="to_top"></a>
+</body>
+</html>

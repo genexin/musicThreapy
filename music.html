@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="Favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="Favicon.ico" mce_href="Favicon.ico" type="image/x-icon">
+<!-- main style sheet -->
+<link rel="stylesheet" href="style/style_4.css">
+<!-- scroller style sheet -->
+<link rel="stylesheet" href="style/nanoscroller.css">
+<!-- latest jQuery direct from google's and Microsoft's CDN -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- scroller script -->
+<script type="text/javascript" src="script/jquery.nanoscroller.min.js"></script>
+<!-- jquery ui js -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<!-- music player js -->
+<script type="text/javascript" src="script/musicplayer.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+         $(".nano").nanoScroller();
+    });
+</script>
+
+<title>乐疗小站</title>
+</head>
+
+<body>
+<div class="out_container">
+	<!-- left side navigator -->
+	<div id="left_nav">
+    	<div id="left_nav_shadow1">
+        	<div id="left_nav_shadow2">
+    			<div class="ver_nav">
+                	<ul>
+                    	<li id="music_logo"><a href="#" target="_self" ></a><div class="seg_line"></div></li>
+                		<li><div><a href="index.html" target="new" title="乐疗小站"><h2 style="color:#333;">乐疗小站</h2></a><div class="seg_line"></div></div></li>
+                        <li><a href="team.html" target="new" title="专业团队"><h2 style="color:#333;">专业团队</h2></a><div class="seg_line"></div></li>
+                        <li><a href="research.html" target="new" title="研究成果"><h2 style="color:#333;">研究成果</h2></a><div class="seg_line"></div></li>
+                        <li><a href="http://www.comp.polyu.edu.hk/~csyuzhao" target="new" title="研究成果"><h2 style="font-size:16px; color:#333;">认知计算实验室</h2></a><div class="seg_line"></div></li>
+                        <li><a href="http://www.polyu.edu.hk/uhs/hk/" target="new" title="医疗保健处"><h2 style="font-size:18px; color:#333;">医疗保健处</h2></a><div class="seg_line"></div></li>
+                        <li><a href="http://www.musicrazy.com/phpbb" target="new" title="讨论区"><h2 style="font-size:18px; color:#333;">讨论区</h2></a><div class="seg_line"></div></li>
+                    </ul>
+                </div>
+    		</div>
+        </div>
+    </div>
+
+    <!-- right side player -->
+	<div id="right_player">
+    	<div id="right_player_shadow1">
+        	<div id="right_player_shadow2">
+            	<div class="user_feedback">
+                    <div id="feedback">
+                    <div class="footer_seg_line"></div>
+                    <p>如果您对本小站有任何宝贵意见，或您有自己喜欢、想听的歌曲推荐，请在此留言:</p>
+                        <form id="comment">
+                            <!--<textarea style="width:220px; height:200px;" id="content" name="content" form="comment" onfocus="if(value=='请在此输入……'){value=''}" onblur="if (value ==''){value='请在此输入……'}">请在此输入……</textarea>-->
+                            <textarea style="width:220px; height:200px;" id="content" name="content" form="comment"></textarea>
+                            <input type="submit" value="Submit" style="display:none;" />
+                            <!--<input type="submit" value="提交">-->
+                        </form>
+                        <button id="comment_sub" type="submit" form="comment" value="提交" style="margin-top:10px;">提交</button>
+                        <div class="fadelayer"></div>
+                        <!--<iframe id="action_target" name="action_target" style="display:none;"></iframe>-->
+                    </div>
+                    <div class="footer_seg_line"></div>
+                    <div class="share">
+                        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        </div>
+                        <script>
+                        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"欢迎来到我们的乐疗小站","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                        </script>
+                    </div>
+                </div><!-- user feedback end -->
+            </div>
+        </div>
+    </div>
+    
+   <!-- main body area -->
+   <div id="center_body">
+       <div id="content_wrapper">
+            <h2>音乐聆听</h2>
+            <div class="seg_line"></div>
+            <div id="player">
+                <div>
+                    <img class="cover" />
+                </div>
+                <div id="audio_info">
+                    <p class="song_name"></p>
+                </div>
+                <div id="control_area">
+                    <!-- Progress par -->
+                    <div id="duration">
+                        <div id="error"></div>
+                        <div id="cur">0'0"</div>
+                        <div id="dur">0'0"</div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="progress_bar ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+                        <div class="load_bar" style="100%"></div>
+                        <div class="clearfix"></div>
+                    </div> 
+                    <!-- Control buttons: play/pause, prev, next, volume -->
+                    <div class="control_btns">
+                        <a href="#" title="播放"><span id="play_btn"></span></a>
+                        <a href="#" title="暂停"><span id="pause_btn"></span></a>
+                        <a href="#" title="上一首"><span id="play_prev"></span></a>
+                        <a href="#" title="下一首"><span id="play_next"></span></a>
+
+                        <span class="volume">
+                            <i class="volume_ico"></i>
+                            <span class="voice_control" style="width:0px;">
+                                 <div id="volume_slider" class="inner ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+                                    <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left:60%;"></a>
+                                 </div>
+                            </span>
+                        </span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <ul class="playlist" id="total">
+                        <li song="anxiang.mp3" cover="anxiang.jpg" title="暗香"></li>
+                        <li song="chaoyuange.mp3" cover="chaoyuange.jpg" title="朝元歌"></li>
+                        <li song="chushuilian.mp3" cover="chushuilian.jpg" title="出水连"></li>
+                        <li song="fanlongzhou.mp3" cover="fanlongzhou.jpg" title="泛龙舟"></li>
+                        <li song="guanglingsan.mp3" cover="guanglingsan.jpg" title="广陵散"></li>
+                        <li song="kange.mp3" cover="kange.jpg" title="侃歌"></li>
+                        <li song="lisao.mp3" cover="lisao.jpg" title="离骚"></li>
+                        <li song="liangxiaoyin.mp3" cover="liangxiaoyin.jpg" title="良宵引"></li>
+                        <li song="meihuasannong.mp3" cover="meihuasannong.jpg" title="梅花三弄"></li>
+                        <li song="qiuyechang.mp3" cover="qiuyechang.jpg" title="秋夜长"></li>
+                        <li song="rimuyunlin.mp3" cover="rimuyunlin.jpg" title="日暮云林"></li>
+                        <li song="wangzhaojun.mp3" cover="wangzhaojun.jpg" title="王昭君"></li>
+                        <li song="wuyeti.mp3" cover="wuyeti.jpg" title="乌夜啼"></li>
+                        <li song="xiangfeiyuan.mp3" cover="xiangfeiyuan.jpg" title="湘妃怨"></li>
+                        <li song="yangguansandie.mp3" cover="yangguansandie.jpg" title="阳关三叠"></li>
+                        <li song="zhuangtaiqiusi.mp3" cover="zhuangtaiqiusi.jpg" title="妆台秋思"></li>
+                        <li song="aiying.mp3" cover="aiying.jpg" title="哀郢"></li>
+                        <li song="einai.mp3" cover="einai.jpg" title="欸乃"></li>
+                        <li song="chunjianghuayueye.mp3" cover="chunjianghuayueye.jpg" title="春江花月夜"></li>
+                        <li song="danhuangliu.mp3" cover="danhuangliu.jpg" title="淡黄柳"></li>
+                        <li song="dongtingqiusi.mp3" cover="dongtingqiusi.jpg" title="洞庭秋思"></li>
+                        <li song="guyuan.mp3" cover="guyuan.jpg" title="古怨"></li>
+                        <li song="jieshitiaoyoulan.mp3" cover="jieshitiaoyoulan.jpg" title="碣石调幽兰"></li>
+                        <li song="pingshaluoyan.mp3" cover="pingshaluoyan.jpg" title="平沙落雁"></li>
+                        <li song="yumeiling.mp3" cover="yumeiling.jpg" title="玉梅令"></li>
+                        <li song="chunxiaoyin.mp3" cover="chunxiaoyin.jpg" title="春晓吟"></li>
+                        <li song="caiyunzhuiyue.mp3" cover="caiyunzhuiyue.jpg" title="彩云追月"></li>
+                        <li song="chunyingzhuan.mp3" cover="chunyingzhuan.jpg" title="春莺啭"></li>
+                        <li song="eryuelilai.mp3" cover="eryuelilai.jpg" title="二月里来"></li>
+                        <li song="xingjiesihe.mp3" cover="xingjiesihe.jpg" title="行街四合"></li>
+                        <li song="jiuhuzi.mp3" cover="jiuhuzi.jpg" title="酒胡子"></li>
+                        <li song="jiukuang.mp3" cover="jiukuang.jpg" title="酒狂"></li>
+                        <li song="nichangyuyi.mp3" cover="nichangyuyi.jpg" title="霓裳羽衣"></li>
+                        <li song="qinsangqu.mp3" cover="qinsangqu.jpg" title="秦桑曲"></li>
+                        <li song="xiaoxiangshuiyun.mp3" cover="xiaoxiangshuiyun.jpg" title="潇湘水云"></li>
+                        <li song="yangchun.mp3" cover="yangchun.jpg" title="阳春"></li>
+                        <li song="lizuwuqu.mp3" cover="lizuwuqu.jpg" title="黎族舞曲"></li>
+                        <li song="yueguangxiadefengweizhu.mp3" cover="yueguangxiadefengweizhu.jpg" title="月光下的凤尾竹"></li>
+                        <li song="zhegufei.mp3" cover="zhegufei.jpg" title="鹧鸪飞"></li>
+                        <li song="hanyaxishui.mp3" cover="hanyaxishui.jpg" title="寒鸦戏水"></li>
+                    </ul>
+                    <ul class="playlist" id="depression">
+                        <li song="anxiang.mp3" cover="anxiang.jpg" title="暗香"></li>
+                        <li song="chaoyuange.mp3" cover="chaoyuange.jpg" title="朝元歌"></li>
+                        <li song="chushuilian.mp3" cover="chushuilian.jpg" title="出水连"></li>
+                        <li song="fanlongzhou.mp3" cover="fanlongzhou.jpg" title="泛龙舟"></li>
+                        <li song="guanglingsan.mp3" cover="guanglingsan.jpg" title="广陵散"></li>
+                        <li song="kange.mp3" cover="kange.jpg" title="侃歌"></li>
+                        <li song="lisao.mp3" cover="lisao.jpg" title="离骚"></li>
+                        <li song="liangxiaoyin.mp3" cover="liangxiaoyin.jpg" title="良宵引"></li>
+                        <li song="meihuasannong.mp3" cover="meihuasannong.jpg" title="梅花三弄"></li>
+                        <li song="qiuyechang.mp3" cover="qiuyechang.jpg" title="秋夜长"></li>
+                        <li song="rimuyunlin.mp3" cover="rimuyunlin.jpg" title="日暮云林"></li>
+                        <li song="wangzhaojun.mp3" cover="wangzhaojun.jpg" title="王昭君"></li>
+                        <li song="wuyeti.mp3" cover="wuyeti.jpg" title="乌夜啼"></li>
+                        <li song="xiangfeiyuan.mp3" cover="xiangfeiyuan.jpg" title="湘妃怨"></li>
+                        <li song="yangguansandie.mp3" cover="yangguansandie.jpg" title="阳关三叠"></li>
+                        <li song="zhuangtaiqiusi.mp3" cover="zhuangtaiqiusi.jpg" title="妆台秋思"></li>
+                    </ul>
+                    <ul class="playlist" id="anxiety">
+                        <li song="aiying.mp3" cover="aiying.jpg" title="哀郢"></li>
+                        <li song="einai.mp3" cover="einai.jpg" title="欸乃"></li>
+                        <li song="chunjianghuayueye.mp3" cover="chunjianghuayueye.jpg" title="春江花月夜"></li>
+                        <li song="danhuangliu.mp3" cover="danhuangliu.jpg" title="淡黄柳"></li>
+                        <li song="dongtingqiusi.mp3" cover="dongtingqiusi.jpg" title="洞庭秋思"></li>
+                        <li song="guyuan.mp3" cover="guyuan.jpg" title="古怨"></li>
+                        <li song="jieshitiaoyoulan.mp3" cover="jieshitiaoyoulan.jpg" title="碣石调幽兰"></li>
+                        <li song="pingshaluoyan.mp3" cover="pingshaluoyan.jpg" title="平沙落雁"></li>
+                        <li song="rimuyunlin.mp3" cover="rimuyunlin.jpg" title="日暮云林"></li>
+                        <li song="yumeiling.mp3" cover="yumeiling.jpg" title="玉梅令"></li>
+                        <li song="chunxiaoyin.mp3" cover="chunxiaoyin.jpg" title="春晓吟"></li>
+                        <li song="caiyunzhuiyue.mp3" cover="caiyunzhuiyue.jpg" title="彩云追月"></li>
+                    </ul>
+                    <ul class="playlist" id="stress">
+                        <li song="caiyunzhuiyue.mp3" cover="caiyunzhuiyue.jpg" title="彩云追月"></li>
+                        <li song="chunyingzhuan.mp3" cover="chunyingzhuan.jpg" title="春莺啭"></li>
+                        <li song="xingjiesihe.mp3" cover="xingjiesihe.jpg" title="行街四合"></li>
+                        <li song="jiuhuzi.mp3" cover="jiuhuzi.jpg" title="酒胡子"></li>
+                        <li song="jiukuang.mp3" cover="jiukuang.jpg" title="酒狂"></li>
+                        <li song="nichangyuyi.mp3" cover="nichangyuyi.jpg" title="霓裳羽衣"></li>
+                        <li song="qinsangqu.mp3" cover="qinsangqu.jpg" title="秦桑曲"></li>
+                        <li song="xiaoxiangshuiyun.mp3" cover="xiaoxiangshuiyun.jpg" title="潇湘水云"></li>
+                        <li song="yangchun.mp3" cover="yangchun.jpg" title="阳春"></li>
+                        <li song="lizuwuqu.mp3" cover="lizuwuqu.jpg" title="黎族舞曲"></li>
+                        <li song="yueguangxiadefengweizhu.mp3" cover="yueguangxiadefengweizhu.jpg" title="月光下的凤尾竹"></li>
+                        <li song="zhegufei.mp3" cover="zhegufei.jpg" title="鹧鸪飞"></li>
+                        <li song="hanyaxishui.mp3" cover="hanyaxishui.jpg" title="寒鸦戏水"></li>
+                    </ul>
+                </div>
+            </div>	<!-- end for the music player -->
+            
+            <div id="emotion_wrapper">
+                <div class="emotion_label"> 
+                    <div class="emotion_detail" style="font-size:16px; width:290px; height:120px; display:inline-block;">
+                        <p>- 长假过后很难开始工作
+                        <br/>- 对任何事提不起兴趣
+                        <br/>- 对未来没有期盼
+                        <br/>- 很容易感到疲劳</p>
+                    </div>
+                    <a href="#" target="_self" title="消沉" style="display:inline-block;"><div class="circle" id="depression_btn"><span class="inner_text">消沉</span></div></a>
+                </div>
+                <div class="emotion_label">
+                    <div class="emotion_detail" style="font-size:16px; width:290px; height:120px; display:inline-block;">
+                         <p>
+                          - 很难放松自己<br/>
+                          - 平白无故消耗很多精神<br/>
+                          - 感到困难堆积如山<br/>
+                          - 逃避社交<br/>
+                          </p>
+                    </div>
+                    <a href="#" target="_self" title="压力" style="display:inline-block;"><div class="circle" id="stress_btn"><span class="inner_text">压力</span></div></a>
+                </div>
+                <div class="emotion_label">
+                    <div class="emotion_detail" style="font-size:16px; width:290px; height:120px; display:inline-block;">
+                        <p>- 经常发脾气，跟人吵架<br/>
+                          - 注意力分散<br/>
+                          - 膨胀的自尊心<br/>
+                          - 比原来多话或语速过快</p>
+                    </div>
+                    <a href="#" target="_self" title="焦虑" style="display:inline-block;"><div class="circle" id="anxiety_btn"><span class="inner_text">焦虑</span></div></a>
+                </div>
+            </div>
+            
+
+            <div class="clearfix"></div>
+
+            <div class="footer">
+                <div class="footer_seg_line"></div>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr><td align="center"><div class="footer_info"> Copyright ©2015 <a href="http://www.comp.polyu.edu.hk/~csyuzhao" target="_self">香港理工大学计算学系认知科学实验室</a> & <a href="http://www.polyu.edu.hk/uhs/hk/"> 香港理工大学医疗保健处</a>. All Rights Reserved.</div></td></tr>
+                        <tr><td align="center">
+                        <div class="footer_info">This website is best viewed with Microsoft Internet Explorer 7.0, Firefox 3.0, Chrome 10.0 or above.</div>
+                        </td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> <!-- main body end tag -->
+</div>
+</body>
+</html>

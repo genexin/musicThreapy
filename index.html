@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="Favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="Favicon.ico" mce_href="Favicon.ico" type="image/x-icon">
+<!-- main style sheet -->
+<link rel="stylesheet" href="style/style_4.css">
+<!-- scroller style sheet -->
+<link rel="stylesheet" href="style/nanoscroller.css">
+<!-- latest jQuery direct from google's and Microsoft's CDN -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- scroller script -->
+<script type="text/javascript" src="script/jquery.nanoscroller.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+         $(".nano").nanoScroller(); 
+    
+		$("#nano_wrapper").on("update",function(event,values){
+			if (values.position>100) {
+				$(".to_top").fadeIn();
+			} else {
+				$(".to_top").fadeOut();
+			}
+		});
+		
+		//Click event to scroll to top
+		$(".to_top").click(function(){
+			$(".nano").nanoScroller({scroll: "top"});
+			return false;
+		});
+	});
+</script>
+
+<title>乐疗小站</title>
+</head>
+
+<body>
+	<div id="guide_wrapper">
+    	<!-- navigation bar -->
+        <div id="guide_nav_bar">
+        	<div id="nav_content">
+            	<ul>
+                	<li id="logo"><a href="#" target="_self"  title="乐疗小站"></a></li>
+                	<li><a href="index.html" target="_self">乐疗小站</a></li>
+                    <li><a href="team.html" target="_self">专业团队</a></li>
+                    <li><a href="research.html" target="_self">研究成果</a></li>
+                    <li><a href="http://www.comp.polyu.edu.hk/~csyuzhao" target="new">认知计算实验室</a></li>
+                    <li><a href="http://www.polyu.edu.hk/uhs/hk/" target="new">医疗保健处</a></li>
+                    <li><a href="http://www.musicrazy.com/phpbb/" target="new">讨论区</a></li>
+                    <li id="nav_play"><a href="music.html" target="_self"  title="播放"></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- body content area -->
+        <div id="nano_wrapper" class="nano">
+        	<div class="nano-content">
+                <div class="body_wrapper">
+                    <div id="guide_body_area">
+                        <div id="guide_body_shadow1">
+                            <div id="guide_body_shadow2">   
+                                <div id="guide_content">
+                                    <div id="header">
+                                        <h2>网站介绍</h2>
+                                        <div class="seg_line"></div>
+                                        <p><strong>欢迎</strong>来到乐疗小站。您现在听到的乐曲是罗思敏医生在催眠状态下弹奏的一首琵琶古曲。如果您想关闭音乐播放，请按<![if (!IE)|(gte IE 9)]>
+                                            <a href="#" onclick="document.getElementById('bg_music').muted = true; return false">这里</a>
+                                        <![endif]>
+                                        <!--[if lt IE 9]>
+                                            <bgsound id="bg_music" src="static/audio/clip.mp3" autostart="true" loop="1">
+                                            <a href="#" onclick="document.all['bg_music'].src=''; return false">这里</a>
+                                        <![endif]--> 。</p>
+                                        <p><strong>乐疗小站</strong>是一个隶属于香港理工大学认知计算实验室的非盈利公益服务网站。作为香港第一个认知计算实验室，我们长期专注于计算机科学与脑科学的交叉研究。乐疗小站是由我们和香港理工大学医疗保健处共同创立的，旨在为受情绪问题困扰的大众提供免费，专业，便捷的线上音乐康复服务。</p>
+                                        <p>鉴于<strong>版权问题</strong>，乐疗小站现阶段只提供中国古曲。这些古曲是由香港理工大学医疗保健处罗思敏高级医生和香港理工大学认知计算实验室的音乐机器人小丝共同演奏的。</p>
+                                        <p>鉴于<strong>隐私保护</strong>，我们不会要求您提供任何个人信息，也不会向您发送任何广告。您可以根据自己的情绪问题类别，在您方便的时间直接点击下面的链接欣赏音乐。</p>
+                                        <div id="emotion_wrapper">
+                                            <div class="emotion_label">
+                                               <a href="music.html" target="_self" title="点击聆听" class="link_null"> <div class="emotion_span"><span class="inner_text">忧郁</span></div></a>
+                                                <div class="emotion_detail">
+                                                    <p>- 长假过后很难开始工作
+                                                    <br/>- 对任何事提不起兴趣
+                                                    <br/>- 对未来没有期盼
+                                                    <br/>- 很容易感到疲劳</p>
+                                                </div>
+                                            </div>
+                                            <div class="emotion_label">
+                                                <a href="music.html" target="_self" title="点击聆听" class="link_null"><div class="emotion_span"><span class="inner_text">压力</span></div></a>
+                                                <div class="emotion_detail">
+                                                    <p>
+                                                    - 很难放松自己<br/>
+                                                    - 平白无故消耗很多精神<br/>
+                                                    - 感到困难堆积如山<br/>
+                                                    - 逃避社交<br/>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="emotion_label">
+                                                <a href="music.html" target="_self" title="点击聆听" class="link_null"><div class="emotion_span"><span class="inner_text">焦躁</span></div></a>
+                                                <div class="emotion_detail">
+                                                    <p>- 经常发脾气，跟人吵架<br/>
+                                                    - 注意力分散<br/>
+                                                    - 膨胀的自尊心<br/>
+                                                    - 比原来多话或语速过快</p>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div> 
+                                        <p>关于<strong>情绪问题类别</strong>，如果您想进一步确定自己的心理状态，您可以花五分钟时间，先做一个简单的线上测试，我们会根据测试结果即时帮你挑选合适的音乐。心理自测量表请点<a href="dass.html" target="_self">这里</a>。</p>
+                                        <p>关于<strong>私人订制</strong>，如果您希望我们的音乐机器人小丝为您度身定做康复曲单，请把您的匿名（我们不需要您的真实姓名），性别，年龄，情绪问题简述通过email发给乐疗小站的管理员<a href="mailto:csyuzhao@comp.polyu.edu.hk">赵宇</a>先生。</p> 
+                                        <p>关于<strong>理论研究</strong>，如果您想了解更多我们在音乐情绪治疗上的学术研究进展，请点<a href="research.html" target="_self">这里</a>。</p>                         			<p>关于<strong>香港理工大学认知计算实验室</strong>的其它研究方向，请点<a href="http://www.comp.polyu.edu.hk/~csyuzhao" target="_self">这里</a>。<br/><br/></p>
+                                        <p><strong>注意事项：</strong></p>
+                                        <p>1. 如果您对乐疗小站有任何意见和建议，请联系乐疗小站的管理员<a href="mailto:csyuzhao@comp.polyu.edu.hk">赵宇先生</a>。</p>
+                                        <p>2. 如果您有幻视/幻听问题，或者连续三个月以上失眠，建议您在专业心理医生的指导下使用乐疗小站。</p>
+                                        <p>3. 如果您对音乐康复治疗的研究或者业界合作有兴趣，您可以联系香港理工大学认知计算实验室主任<a href="mailto:csyliu@comp.polyu.edu.hk">刘焱老师</a>。</p>
+                                    </div>
+            
+                                    <div class="footer" id="guide_footer">
+                                        <div class="footer_seg_line"></div>
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr><td align="center"><div class="footer_info"> Copyright ©2015 <a href="http://www.comp.polyu.edu.hk/~csyuzhao" target="_self">香港理工大学电子计算学系认知科学实验室</a> & <a href="http://www.polyu.edu.hk/uhs/hk/"> 香港理工大学医疗保健处</a>. All Rights Reserved.</div></td></tr>
+                                                <tr><td align="center">
+                                                <div class="footer_info">This website is best viewed with Microsoft Internet Explorer 7.0, Firefox 3.0, Chrome 10.0 or above.</div>
+                                                </td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- background music --> 
+    <!--<embed id="bg_music" src="music/chunjianghuayueye_short.mp3" hidden="true" autostart="true" loop="true" type='audio/mpeg'/> -->
+	<audio id="bg_music" autoplay="autoplay" style="display:none">
+  		<source src="music/chunjianghuayueye.mp3" type="audio/mpeg" />
+	</audio> 
+
+	<a href="#" class="to_top"></a>
+</body>
+</html>

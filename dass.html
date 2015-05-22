@@ -1,0 +1,440 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="Favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="Favicon.ico" mce_href="Favicon.ico" type="image/x-icon">
+<!-- main style sheet -->
+<link rel="stylesheet" href="style/style_4.css">
+<!-- scroller style sheet -->
+<link rel="stylesheet" href="style/nanoscroller.css">
+<!-- latest jQuery direct from google's and Microsoft's CDN -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- scroller script -->
+<script type="text/javascript" src="script/jquery.nanoscroller.min.js"></script>
+<script type="text/javascript" src="script/dass1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+        $(".nano").nanoScroller(); 
+    
+		$("#nano_wrapper").on("update",function(event,values){
+			if (values.position>100) {
+				$(".to_top").fadeIn();
+			} else {
+				$(".to_top").fadeOut();
+			}
+		});
+		
+		//Click event to scroll to top
+		$(".to_top").click(function(){
+			$(".nano").nanoScroller({scroll: "top"});
+			return false;
+		});
+	});
+</script>
+
+<title>乐疗小站</title>
+</head>
+
+<body>
+	<div id="guide_wrapper">
+    	<!-- navigation bar -->
+        <div id="guide_nav_bar">
+        	<div id="nav_content">
+            	<ul>
+                	<li id="logo"><a href="#" target="_self"  title="乐疗小站"></a></li>
+                	<li><a href="index.html" target="_self">乐疗小站</a></li>
+                    <li><a href="team.html" target="_self">专业团队</a></li>
+                    <li><a href="research.html" target="_self">研究成果</a></li>
+                    <li><a href="http://www.comp.polyu.edu.hk/~csyuzhao" target="new">认知计算实验室</a></li>
+                    <li><a href="http://www.polyu.edu.hk/uhs/hk/" target="new">医疗保健处</a></li>
+                    <li><a href="http://www.musicrazy.com/phpbb/" target="new">讨论区</a></li>
+                    <li id="nav_play"><a href="music.html" target="_self"  title="播放"></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- body content area -->
+        <div id="nano_wrapper" class="nano">
+            <div class="nano-content">
+                <div class="body_wrapper">
+                    <div id="guide_body_area">
+                        <div id="guide_body_shadow1">
+                            <div id="guide_body_shadow2">   
+                                <div id="guide_content">
+                                    <div id="header">
+                                        <h2>心理自测量表</h2>
+                                        <div class="seg_line"></div>
+                                        <p>请仔细阅读以下每一个句子，并选择一个数字，表示过往一个星期如何适用于您。答案并无对错之分。请不要花太多时间在某一句上。
+                                        <br/><br/>评估量表：
+                                        <br/>0=从不
+                                        <br/>1=偶尔
+                                        <br/>2=有时
+                                        <br/>3=时长
+                                        <br/>4=总是
+                                        </p>
+                                        <div class="dass">
+                                            <div class="alert_box"></div>
+                                            <div class="alert_box_big"></div>
+                                            <form id="dass_ques">
+                                            <div class="dass_item" id="1st">
+                                                <span class="item_text">1. 我比平时更有自信，认为很多事情都做得到</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="1st" value="0">0
+                                                <input type="radio" name="1st" value="1">1
+                                                <input type="radio" name="1st" value="2">2
+                                                <input type="radio" name="1st" value="3">3
+                                                <input type="radio" name="1st" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="2nd">
+                                                <span class="item_text">2. 我的睡眠时间变长或出现失眠</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="2nd" value="0">0
+                                                <input type="radio" name="2nd" value="1">1
+                                                <input type="radio" name="2nd" value="2">2
+                                                <input type="radio" name="2nd" value="3">3
+                                                <input type="radio" name="2nd" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="3rd">
+                                                <span class="item_text">3. 我想到很多事情，或思想快得难以停下来</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="3rd" value="0">0
+                                                <input type="radio" name="3rd" value="1">1
+                                                <input type="radio" name="3rd" value="2">2
+                                                <input type="radio" name="3rd" value="3">3
+                                                <input type="radio" name="3rd" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="4th">
+                                                <span class="item_text">4. 我对以前喜欢的工作、嗜好或娱樂都不再感兴趣了，对任何事情都不能热衷</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="4th" value="0">0
+                                                <input type="radio" name="4th" value="1">1
+                                                <input type="radio" name="4th" value="2">2
+                                                <input type="radio" name="4th" value="3">3
+                                                <input type="radio" name="4th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="5th">
+                                                <span class="item_text">5. 我的肌肉僵硬，手或脚会不自主地颤抖</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="5th" value="0">0
+                                                <input type="radio" name="5th" value="1">1
+                                                <input type="radio" name="5th" value="2">2
+                                                <input type="radio" name="5th" value="3">3
+                                                <input type="radio" name="5th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="6th">
+                                                <span class="item_text">6. 我觉得自己平白无故消耗很多精神</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="6th" value="0">0
+                                                <input type="radio" name="6th" value="1">1
+                                                <input type="radio" name="6th" value="2">2
+                                                <input type="radio" name="6th" value="3">3
+                                                <input type="radio" name="6th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="7th">
+                                                <span class="item_text">7. 无论何种原因，当被其他事情耽搁时（例如等电梯，等交通灯），我会极不耐烦</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="7th" value="0">0
+                                                <input type="radio" name="7th" value="1">1
+                                                <input type="radio" name="7th" value="2">2
+                                                <input type="radio" name="7th" value="3">3
+                                                <input type="radio" name="7th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="8th">
+                                                <span class="item_text">8. 我的感到没有活力或很容易疲劳</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="8th" value="0">0
+                                                <input type="radio" name="8th" value="1">1
+                                                <input type="radio" name="8th" value="2">2
+                                                <input type="radio" name="8th" value="3">3
+                                                <input type="radio" name="8th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="9th">
+                                                <span class="item_text">9. 我无法容忍任何阻碍我继续工作的事情</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="9th" value="0">0
+                                                <input type="radio" name="9th" value="1">1
+                                                <input type="radio" name="9th" value="2">2
+                                                <input type="radio" name="9th" value="3">3
+                                                <input type="radio" name="9th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="10th">
+                                                <span class="item_text">10. 我害怕在公共场合出丑，参加聚会、打电话、到商店购物或询问权威人士都感到困难</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="10th" value="0">0
+                                                <input type="radio" name="10th" value="1">1
+                                                <input type="radio" name="10th" value="2">2
+                                                <input type="radio" name="10th" value="3">3
+                                                <input type="radio" name="10th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="11th">
+                                                <span class="item_text">11. 我会过分的担心或忧虑</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="11th" value="0">0
+                                                <input type="radio" name="11th" value="1">1
+                                                <input type="radio" name="11th" value="2">2
+                                                <input type="radio" name="11th" value="3">3
+                                                <input type="radio" name="11th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="12th">
+                                                <span class="item_text">12. 我的说话及活动变少或变慢，回答问题时，反应变慢或没有反应了</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="12th" value="0">0
+                                                <input type="radio" name="12th" value="1">1
+                                                <input type="radio" name="12th" value="2">2
+                                                <input type="radio" name="12th" value="3">3
+                                                <input type="radio" name="12th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="13th">
+                                                <span class="item_text">13. 我经常向人发脾气，跟人吵架</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="13th" value="0">0
+                                                <input type="radio" name="13th" value="1">1
+                                                <input type="radio" name="13th" value="2">2
+                                                <input type="radio" name="13th" value="3">3
+                                                <input type="radio" name="13th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="14th">
+                                                <span class="item_text">14. 我比平时多做冒险的事情，参加更多刺激活动，做事过量，例如买了很多不需要的东西、赌博次数增加、危险驾驶、冒险投资等</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="14th" value="0">0
+                                                <input type="radio" name="14th" value="1">1
+                                                <input type="radio" name="14th" value="2">2
+                                                <input type="radio" name="14th" value="3">3
+                                                <input type="radio" name="14th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="15th">
+                                                <span class="item_text">15. 我对事情往往做出过敏反应</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="15th" value="0">0
+                                                <input type="radio" name="15th" value="1">1
+                                                <input type="radio" name="15th" value="2">2
+                                                <input type="radio" name="15th" value="3">3
+                                                <input type="radio" name="15th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="16th">
+                                                <span class="item_text">16. 我比平时容易分心，做事难以集中精神</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="16th" value="0">0
+                                                <input type="radio" name="16th" value="1">1
+                                                <input type="radio" name="16th" value="2">2
+                                                <input type="radio" name="16th" value="3">3
+                                                <input type="radio" name="16th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="17th">
+                                                <span class="item_text">17. 我常生气，因为很多事情的发生是超出自己所能控制的</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="17th" value="0">0
+                                                <input type="radio" name="17th" value="1">1
+                                                <input type="radio" name="17th" value="2">2
+                                                <input type="radio" name="17th" value="3">3
+                                                <input type="radio" name="17th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="18th">
+                                                <span class="item_text">18. 我出现心跳加速、呼吸困难、头痛、头晕、反胃、胸痛、冒冷汗</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="18th" value="0">0
+                                                <input type="radio" name="18th" value="1">1
+                                                <input type="radio" name="18th" value="2">2
+                                                <input type="radio" name="18th" value="3">3
+                                                <input type="radio" name="18th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="19th">
+                                                <span class="item_text">19. 我感到很难自动开始去工作</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="19th" value="0">0
+                                                <input type="radio" name="19th" value="1">1
+                                                <input type="radio" name="19th" value="2">2
+                                                <input type="radio" name="19th" value="3">3
+                                                <input type="radio" name="19th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="20th">
+                                                <span class="item_text">20. 我比平时睡得少，却不觉得疲倦</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="20th" value="0">0
+                                                <input type="radio" name="20th" value="1">1
+                                                <input type="radio" name="20th" value="2">2
+                                                <input type="radio" name="20th" value="3">3
+                                                <input type="radio" name="20th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="21th">
+                                                <span class="item_text">21. 我觉得自己对将来没有什么可期盼</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="21th" value="0">0
+                                                <input type="radio" name="21th" value="1">1
+                                                <input type="radio" name="21th" value="2">2
+                                                <input type="radio" name="21th" value="3">3
+                                                <input type="radio" name="21th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="22th">
+                                                <span class="item_text">22. 我的食欲突然变的很好或很坏</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="22th" value="0">0
+                                                <input type="radio" name="22th" value="1">1
+                                                <input type="radio" name="22th" value="2">2
+                                                <input type="radio" name="22th" value="3">3
+                                                <input type="radio" name="22th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="23th">
+                                                <span class="item_text">23. 我会因为一些无法预期的事情发生而感到心烦意乱</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="23th" value="0">0
+                                                <input type="radio" name="23th" value="1">1
+                                                <input type="radio" name="23th" value="2">2
+                                                <input type="radio" name="23th" value="3">3
+                                                <input type="radio" name="23th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="24th">
+                                                <span class="item_text">24. 我说话比原来多，或说话速度加快</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="24th" value="0">0
+                                                <input type="radio" name="24th" value="1">1
+                                                <input type="radio" name="24th" value="2">2
+                                                <input type="radio" name="24th" value="3">3
+                                                <input type="radio" name="24th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="25th">
+                                                <span class="item_text">25. 我感到很难放松自己</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="25th" value="0">0
+                                                <input type="radio" name="25th" value="1">1
+                                                <input type="radio" name="25th" value="2">2
+                                                <input type="radio" name="25th" value="3">3
+                                                <input type="radio" name="25th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="26th">
+                                                <span class="item_text">26. 我会批评自己的弱点或错误，觉得每件坏事情是自己造成的</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="26th" value="0">0
+                                                <input type="radio" name="26th" value="1">1
+                                                <input type="radio" name="26th" value="2">2
+                                                <input type="radio" name="26th" value="3">3
+                                                <input type="radio" name="26th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="27th">
+                                                <span class="item_text">27. 我常感到困难的事情堆积如山，而自己无法克服它们</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="27th" value="0">0
+                                                <input type="radio" name="27th" value="1">1
+                                                <input type="radio" name="27th" value="2">2
+                                                <input type="radio" name="27th" value="3">3
+                                                <input type="radio" name="27th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="28th">
+                                                <span class="item_text">28. 我不能集中注意力去念书、工作或做事</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="28th" value="0">0
+                                                <input type="radio" name="28th" value="1">1
+                                                <input type="radio" name="28th" value="2">2
+                                                <input type="radio" name="28th" value="3">3
+                                                <input type="radio" name="28th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="29th">
+                                                <span class="item_text">29. 我感到忐忑不安</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="29th" value="0">0
+                                                <input type="radio" name="29th" value="1">1
+                                                <input type="radio" name="29th" value="2">2
+                                                <input type="radio" name="29th" value="3">3
+                                                <input type="radio" name="29th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="dass_item" id="last_item">
+                                                <span class="item_text">30. 我反复想到死亡或有自杀意念、计划或尝试</span>
+                                                <span class="item_option">
+                                                <input type="radio" name="30th" value="0">0
+                                                <input type="radio" name="30th" value="1">1
+                                                <input type="radio" name="30th" value="2">2
+                                                <input type="radio" name="30th" value="3">3
+                                                <input type="radio" name="30th" value="4">4
+                                                </span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <input type="submit" value="Submit" style="display:none;" />
+                                            <!--<input type="submit" value="提交问卷" style="margin-top:20px; font-size:18px;"/>-->
+                                            </form>
+                                            
+                                            <button id="ques_sub" value="提交">提交</button>
+                                            <div class="fadelayer">提交成功</div>
+                                        </div>                         
+                                    </div>
+            
+                                    <div class="footer" id="guide_footer">
+                                        <div class="footer_seg_line"></div>
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr><td align="center"><div class="footer_info"> Copyright ©2015 <a href="http://www.comp.polyu.edu.hk/~csyuzhao" target="_self">香港理工大学电子计算学系认知科学实验室</a> & <a href="http://www.polyu.edu.hk/uhs/hk/"> 香港理工大学医疗保健处</a>. All Rights Reserved.</div></td></tr>
+                                                <tr><td align="center">
+                                                <div class="footer_info">This website is best viewed with Microsoft Internet Explorer 7.0, Firefox 3.0, Chrome 10.0 or above.</div>
+                                                </td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="to_top"></a>
+</body>
+</html>

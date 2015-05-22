@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{width:100%;
+ 	height:100%;
+	margin:0;
+	min-width:300px;
+	min-height:215px;
+	position:absolute;
+	font-weight:500;
+	font-size:14px;
+	line-height:20px;
+	color:#555;
+	background-color:#fff
+	-webkit-font-smoothing:antialiased;
+	font-family:Lato,Helvetica,Arial,sans-serif;
+	display:block;
+	};
+
+#body_wrapper{
+	background:#f1f3f3;
+	overflow:hidden;
+	position:absolute;
+	height: 90%;
+	top: 5%;
+	left: 5%;
+	width: 90%;
+	border-radius: 10px;
+	display:block;
+	/*transition-timing-function:ease-in-out;
+	-moz-transition-timing-function:ease-in-out;
+	-webkit-transition-timing-function:ease-in-out;*/
+	};
+
+#scroller{border-radius:10px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	/*transform: translate3d(0,0,0);*/
+	z-index: 50;
+	transition: all 500ms;
+	}
+
+#home_header{
+	height:90px;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	border:1px solid #d9dada;
+	border-radius:8px 8px 0 0;
+	margin:13px 13px 0 13px;
+	text-decoration:none;
+	}
+
+#home_body{width:100%;
+	height:100%
+	top:2px;
+	left:13px;
+	right:13px;
+	bottom:0;
+	margin:auto;
+	position:absolute;
+	background-size:100% 100%;
+	overflow:hidden;
+	};
+	
+#site_footer{width:100%;
+	height:30px;
+	overflow:hidden;
+	position:absolute;
+	bottom:5%;
+	z-index:1000;
+	text-align:center;
+	};
+	
+#site_footer ul{top:7px;
+	margin:0;
+	position:relative;
+	};
+	
+#site_footer ul li{padding:0 8px 0 8px;
+	color:#555;
+	font-size:14px;
+	font-weight:700;
+	list-style:none;
+	display:inline;
+	text-decoration:none;
+	text-transform:lowercase;
+	};
+	
+#site_footer ul li a{color:#555;
+	text-transform:capitalize;
+	text-decoration:none;
+	};
+	

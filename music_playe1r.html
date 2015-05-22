@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style/style_player.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="script/musicplayer.js"></script>
+<title>music player</title>
+</head>
+
+<body>
+	<div id="right_player">
+    	<div id="right_player_shadow1">
+        	<div id="right_player_shadow2">
+            	<div id="player">
+                	<div>
+                    	<img class="cover" />
+                    </div>
+                    <div id="audio_info">
+                    	<p class="song_name"></p>
+                    </div>
+                    <div id="control_area">
+                    	<!-- Progress par -->
+                        <div id="duration">
+                        	<div id="error"></div>
+                            <div id="cur"></div>
+                    		<div id="dur"></div>
+                            <div class="clearfix"></div>
+                        </div>
+    					<div class="progress_bar ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+    						<div class="load_bar" style="100%"></div>
+                            <div class="clearfix"></div>
+                        </div> 
+                        <!-- Control buttons: play/pause, prev, next, volume -->
+                        <div class="control_btns">
+                            <a href="#" title="播放"><span id="play_btn"></span></a>
+                            <a href="#" title="暂停"><span id="pause_btn"></span></a>
+                            <a href="#" title="上一首"><span id="play_prev"></span></a>
+                            <a href="#" title="下一首"><span id="play_next"></span></a>
+
+                            <span class="volume">
+                            	<i class="volume_ico"></i>
+                                <span class="voice_control" style="width:0px;">
+                           			 <div id="volume_slider" class="inner ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+                                        <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left:60%;"></a>
+                                     </div>
+                                </span>
+                            </span>
+                            <div class="clearfix"></div>
+                        </div>
+                        <ul id="playlist" style="display:none">
+                        	<li song="gaoshanliushui_short.mp3" cover="gaoshanliushui.jpg" title="高山流水"></li>
+                            <li song="guanglingsan_short.mp3" cover="guanglingsan.jpg" title="广陵散"></li>
+                            <li song="yuqiaowenda_short.mp3" cover="yuqiaowenda.jpg" title="渔樵问答"></li>
+                        </ul>
+            		</div>
+                </div>
+                <div class="seg_line"></div>
+                <div id="feedback">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

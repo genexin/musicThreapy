@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style/style_player.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="script/musicplayer.js"></script>
+<title>music player</title>
+</head>
+
+<body>
+	<div id="right_player">
+    	<div id="right_player_shadow1">
+        	<div id="right_player_shadow2">
+            	<div id="player">
+                	<div id="cover">
+                    	<img src="img/gaoshanliushui.jpg">
+                    </div>
+                    <div id="audio_info">
+                    	<p class="song_name">高山流水</p>
+                    </div>
+                    <div id="control_area">
+                    	<!-- Progress par -->
+                        <div id="duration">
+                            <div id="cur">0:00</div>
+                    		<div id="dur">0:00</div>
+                            <div class="clearfix"></div>
+                        </div>
+    					<div class="progress_bar ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+    						<div class="load_bar" style="100%"></div>
+            				<div style="width: 0.9%;" class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" tabindex="1"></div>
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left:0.9%"></a>
+                            <div class="clearfix"></div>
+                        </div> 
+                        <!-- Control buttons: play/pause, prev, next, volume -->
+                        <div class="control_btns">
+                            <span id="play_btn"><a href="javascript:;" title="播放"></a></span>
+                            <span id="pause_btn"></span>
+                            <span class="play_prev"><a href="javascript:;" title="上一个节目"></a></span>
+                            <span class="play_next"><a href="javascript:;" title="下一个节目"></a></span>
+                            <span class="volume">
+                            	<i class="volume_ico"></i>
+                                <span class="voice_control" style="width:0px;">
+                           			 <span class="inner ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+                                     	<div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width:7%;"></div>
+                                        <a class="ui-slider-handel ui-state-default ui-corner-all" href="#" style="left:72%;"></a>
+                                     </span>
+                                </span>
+                            </span>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div id="playlist">
+                        	<div song="music/gaoshanliushui.mp3" cover="img/gaoshanliushui.jpg"></div>
+                            <div song="music/gaoshanliushui.mp3" cover="img/gaoshanliushui.jpg"></div>
+                            <div song="music/gaoshanliushui.mp3" cover="img/gaoshanliushui.jpg"></div>
+                        </div>
+            		</div>
+                </div>
+                <div class="seg_line"></div>
+                <div id="feedback">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- main style sheet -->
+<link rel="stylesheet" href="style/style_1.css">
+<!-- styles needed by jScrollPane -->
+<link type="text/css" href="style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+<!-- latest jQuery direct from google's and Microsoft's CDN -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+<!-- the mousewheel plugin - optional to provide mousewheel support -->
+<script type="text/javascript" src="script/jquery.mousewheel.js"></script>
+<!-- the jScrollPane script -->
+<script type="text/javascript" src="script/jquery.jscrollpane.min.js"></script>
+<!-- initialize the jscroll object -->
+<script type="text/javascript">
+$(function()
+{
+
+	var bars = '.jspHorizontalBar, .jspVerticalBar';
+
+	$('.scroll-pane').bind('jsp-initialised', function (event, isScrollable) {
+		
+		//hide the scroll bar on first load
+		$(this).find(bars).hide();
+	
+	}).jScrollPane().hover(
+	
+		//hide show scrollbar
+		function () {
+			$(this).find(bars).stop().fadeTo('fast', 0.9);
+		},
+		function () {
+			$(this).find(bars).stop().fadeTo('fast', 0);
+		}
+
+	);	
+	//$('.scroll-pane').jScrollPane();
+
+});
+</script>
+
+<title>音乐情绪康复治疗</title>
+</head>
+
+<body>
+<div class="out_container">
+	<!-- left side navigator -->
+	<div id="left_nav">
+    	<div id="left_nav_shadow1">
+        	<div id="left_nav_shadow2">
+    			<div class="logo"><h1>音乐治疗<h1></div>
+    		</div>
+        </div>
+    </div>
+	 
+    <!-- right side player -->
+	<!--<div id="right_player">
+    	<div id="right_player_shadow1">
+        	<div id="right_player_shadow2">
+            </div>
+        </div>
+    </div>-->
+
+    
+   <!-- main body area -->
+   <div id="center_wrapper" >
+       <div id="center_body" class="scroll-pane">
+            <div id="header">
+                <h2>我们的愿景</h2>
+                <div class="seg_line"></div>
+                <p>本网站旨在为大众提供专业音乐治疗与康复服务。我们希望利用音乐，来帮助受情绪疾病困扰的大众提供免费且专业的心理辅助康复与治疗。根据我们之前的研究，中国古典音乐对于舒缓痛症以及缓解焦虑情绪有极佳的效果，相关研究成果已在专业杂志与期刊发表。我们希望通过这个平台，让更多的大众了解与接受音乐治疗，提高自己的身心健康。
+                </p>
+                <p>如果您发现自己近期有以下症状：1>耳鸣、心悸、心跳加速；2>对生活失去兴趣；3>失眠、工作效率低下；4>逃避社交等，您可能已经受到情绪疾病的影响。建议您在专业的心理医生的指导下，使用本网站帮助自己进行心理康复与治疗。如果您在经过一段时间的音乐治疗后，情绪问题没有明显好转，建议您到专业的心理治疗机构及时就诊。
+                </p>
+                <h2>关于我们</h2>
+                <div class="seg_line"></div>
+                <p>本网站由香港理工大学计算学系<a href="http://www4.comp.polyu.edu.hk/~csyuzhao/index.html">认知计算实验室</a>和香港理工大学<a href="http://www.polyu.edu.hk/uhs/hk/">医疗保健处</a>共同创立与维护。香港理工大学<a href="http://www4.comp.polyu.edu.hk/~csyuzhao/index.html">认知计算实验室</a>为香港成立的第一间认知计算实验室，专门从事认知科学与计算机科学跨学科的研究。香港理工大学学<a href="http://www.polyu.edu.hk/uhs/hk/">医疗保健处</a>多年来为理工大学社区内师生以合乎成本效益的方式提供及时和高质量的基层医疗护理服务。</p>
+                <h2>如何使用</h2>
+                <div class="seg_line"></div>
+            </div>
+            
+            <div id="emotion_form">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            
+            
+            <div id="footer">
+                <div class="footer_seg_line"></div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr><td align="center"><div class="footer_info"> Copyright ©2015 <a href="http://www.comp.polyu.edu.hk/~csyuzhao" target="_self">香港理工大学计算学系认知科学实验室</a> & <a href="http://www.polyu.edu.hk/uhs/hk/"> 香港理工大学医疗保健处</a>. All Rights Reserved.</div><td></tr>
+                            <tr><td align="center">
+                            <div class="footer_info">This website is best viewed with Microsoft Internet Explorer 7.0, Firefox 3.0, Chrome 10.0 or above.</div>
+                            </td></tr>
+                        </tbody>
+                    </table>
+                </div>
+        	</div>
+    	</div>
+	</div>
+</div>
+</body>
+</html>
